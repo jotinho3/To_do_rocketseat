@@ -18,13 +18,13 @@ export function Task({ id, content, onDeleteTask, onCheckIsDone }: TaskProps) {
 
   function handleDeleteTaskPopUp() {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "Você tem certeza?",
+      text: "Não poderá reverter essa ação",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Sim, deletar!",
       width: 300,
     }).then((result) => {
       if (result.isConfirmed) {
@@ -53,7 +53,7 @@ export function Task({ id, content, onDeleteTask, onCheckIsDone }: TaskProps) {
 
   return (
     <div className={isDoneActualValue ? styles.taskBoxDone : styles.taskBox}>
-        
+
       <label className={styles.checkbox}>
         <input
           id={id}
